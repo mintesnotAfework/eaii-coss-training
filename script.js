@@ -504,5 +504,90 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    
+    addSlide(9, 
+        "Executive LLM Security", 
+        "Best practices for C-level leaders when using Large Language Models",
+        `<div style="display: flex; flex-direction: column;">          
+            <div style="margin-top: 20px;">
+                <h3 style="color: #0056b3; font-size: 24px; margin-bottom: 25px; text-align: center;">
+                    <i class="fa-solid fa-triangle-exclamation" style="margin-right: 10px;"></i>
+                    Executive-Specific LLM Risks
+                </h3>
+                
+                <div class="content-grid" style="grid-template-columns: repeat(3, 1fr); gap: 25px;">
+                    <!-- Risk 1 -->
+                    <div class="content-card" style="background-color: rgba(211, 47, 47, 0.05);">
+                        <div style="text-align: center;">
+                            <i class="fa-solid fa-file-contract" style="font-size: 48px; color: #d32f2f; margin-bottom: 20px;"></i>
+                            <h4 class="card-title" style="color: #d32f2f;">Confidential Data Exposure</h4>
+                            <p class="card-content">
+                                Executives may inadvertently input strategic plans, M&A details, or financial data
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Risk 2 -->
+                    <div class="content-card" style="background-color: rgba(245, 124, 0, 0.05);">
+                        <div style="text-align: center;">
+                            <i class="fa-solid fa-scale-balanced" style="font-size: 48px; color: #f57c00; margin-bottom: 20px;"></i>
+                            <h4 class="card-title" style="color: #f57c00;">Decision Integrity</h4>
+                            <p class="card-content">
+                                Over-reliance on AI-generated analysis without proper validation
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Risk 3 -->
+                    <div class="content-card" style="background-color: rgba(211, 47, 47, 0.05);">
+                        <div style="text-align: center;">
+                            <i class="fa-solid fa-user-secret" style="font-size: 48px; color: #d32f2f; margin-bottom: 20px;"></i>
+                            <h4 class="card-title" style="color: #d32f2f;">Impersonation Attacks</h4>
+                            <p class="card-content">
+                                AI-generated voice/video deepfakes mimicking executives for fraud
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    );
+    addSlide(10, 
+        "Executive LLM Security", 
+        "Best practices for C-level leaders when using Large Language Models",
+        `<div style="display: flex; flex-direction: column;">                      
+            <div style="margin-top: 40px;">
+                <div class="content-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="content-card" style="border-top: 5px solid #d32f2f;">
+                        <h4 class="card-title" style="color: #d32f2f;">
+                            <i class="fa-solid fa-chart-line" style="margin-right: 10px;"></i>
+                            Executive Attack Statistics
+                        </h4>
+                        <div class="stat-highlight" style="color: #d32f2f; font-size:50px;">85%</div>
+                        <p class="card-content">
+                            of executives have used public LLMs for work-related tasks
+                        </p>
+                        <div class="stat-highlight" style="color: #d32f2f; font-size:75px; font-weight:bolder margin-top: 15px;">63%</div>
+                        <p class="card-content">
+                            admitted inputting potentially sensitive company information
+                        </p>
+                    </div>
+                    
+                    <div class="content-card" style="border-top: 5px solid #0056b3;">
+                        <h4 class="card-title" style="color: #0056b3;">
+                            <i class="fa-solid fa-clock" style="margin-right: 10px;"></i>
+                            Response Time Impact
+                        </h4>
+                        <div class="stat-highlight" style="color: #0056b3; font-size:50px;">3.5x</div>
+                        <p class="card-content">
+                            Faster executive decision-making using LLMs
+                        </p>
+                        <div class="stat-highlight" style="color: #0056b3; font-size: 32px; margin-top: 15px;font-size:75px; font-weight:bolder">40%</div>
+                        <p class="card-content">
+                            Higher likelihood of data leakage at executive level
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    );
 });
