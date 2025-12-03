@@ -549,3 +549,30 @@ body {
     gap: 30px;
     margin-top: 20px;
 }
+
+/* Video specific styles */
+#videoPlaceholder {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#videoPlaceholder:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #0a192f 80%);
+    transform: scale(1.01);
+}
+
+#cybersecurityVideo {
+    background-color: #000;
+    border-radius: 10px;
+}
+
+/* Video controls customization */
+#cybersecurityVideo::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#cybersecurityVideo::-webkit-media-controls-play-button,
+#cybersecurityVideo::-webkit-media-controls-volume-slider,
+#cybersecurityVideo::-webkit-media-controls-mute-button {
+    filter: brightness(0) invert(1);
+}

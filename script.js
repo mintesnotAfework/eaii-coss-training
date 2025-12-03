@@ -268,6 +268,15 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>`
     );
     addSlide(6, 
+        "Video Demonstration", 
+        "Visual example of Ransomeware attack process via Phishing",
+        `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">   
+            <video controls style="width: 50vw; height: auto;">
+                <source src="./phishing.mp4" type="video/mp4">
+            </video>
+        </div>`
+    );
+    addSlide(7, 
         "Phishing Types", 
         "Different categories of phishing attacks based on target and methodology",
         `<div style="display: flex; flex-direction: column;">
@@ -376,7 +385,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(7, 
+    addSlide(8, 
         "Phishing Practice", 
         "Phishing Practice using Google",
         `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">            
@@ -385,7 +394,7 @@ document.addEventListener('DOMContentLoaded', function() {
            </a>
         </div>`
     );
-    addSlide(8, 
+    addSlide(9, 
         "USB Baiting", 
         "Physical social engineering attack exploiting human curiosity with infected storage devices",
         `<div style="display: flex; flex-direction: column;">            
@@ -444,7 +453,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(9, 
+    addSlide(10, 
         "Tailgating", 
         "Physical security breach where unauthorized persons follow authorized individuals into restricted areas",
         `<div style="display: flex; flex-direction: column;">
@@ -513,7 +522,16 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(10, 
+    addSlide(11, 
+        "Video Demonstration", 
+        "Visual example of Tailgating attack",
+        `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">   
+            <video controls style="width: 50vw; height: auto;">
+                <source src="./tailgating.mp4" type="video/mp4">
+            </video>
+        </div>`
+    );
+    addSlide(12, 
         "Password Security Fundamentals", 
         "The critical importance of strong password policies in organizational security",
         `<div style="display: flex; flex-direction: column;">
@@ -590,7 +608,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(11, 
+    addSlide(13, 
         "Common Password Security Issues", 
         "Identifying and addressing prevalent password vulnerabilities in organizations",
         `<div style="display: flex; flex-direction: column;"> 
@@ -668,7 +686,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(12, 
+    addSlide(14, 
         "Common Password Security Issues", 
         "Identifying and addressing prevalent password vulnerabilities in organizations",
         `<div style="display: flex; flex-direction: column;">  
@@ -706,7 +724,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(13, 
+    addSlide(15, 
         "Password Managers & Generators", 
         "Enterprise solutions for secure password management and generation",
         `<div style="display: flex; flex-direction: column;">
@@ -768,12 +786,12 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(14, 
+    addSlide(16, 
         "Artificial Intelligence Security", 
         "Best practices for while using Artificial Intelligence tools",
         ``
     );
-    addSlide(15, 
+    addSlide(17, 
         "Executive LLM Security", 
         "Best practices for C-level leaders when using Large Language Models",
         `<div style="display: flex; flex-direction: column;">          
@@ -820,7 +838,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(16, 
+    addSlide(18, 
         "Executive LLM Security", 
         "Best practices for C-level leaders when using Large Language Models",
         `<div style="display: flex; flex-direction: column;">                      
@@ -859,7 +877,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(17, 
+    addSlide(19, 
         "Executive LLM Security Guidelines", 
         "Practical security protocols for C-level leaders using AI tools",
         `<div style="display: flex; flex-direction: column;">        
@@ -921,7 +939,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(18, 
+    addSlide(20, 
         "Executive LLM Security Guidelines", 
         "Practical security protocols for C-level leaders using AI tools",
         `<div style="display: flex; flex-direction: column;">                    
@@ -958,12 +976,12 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(19, 
+    addSlide(21, 
         "Deepfake & Impersonation Risks", 
         "Deepfake technology threats targeting executives and mitigation strategies",
         ``
     );
-    addSlide(20, 
+    addSlide(22, 
         "Deepfake Threat Landscape", 
         "Understanding AI-generated impersonation risks to organizational security",
         `<div style="display: flex; flex-direction: column;">
@@ -1023,7 +1041,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(21, 
+    addSlide(23, 
         "Deepfake Attack Vectors", 
         "Specific methods and scenarios of AI-generated impersonation attacks",
         `<div style="display: flex; flex-direction: column;"> 
@@ -1105,7 +1123,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(22, 
+    addSlide(24, 
         "Executive Impersonation Risks", 
         "Specific vulnerabilities and threats targeting C-level leadership",
         `<div style="display: flex; flex-direction: column;">
@@ -1174,7 +1192,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(16, 
+    addSlide(25, 
         "Deepfake Detection & Prevention", 
         "Technical and procedural defenses against AI-generated impersonation",
         `<div style="display: flex; flex-direction: column;">
@@ -1230,7 +1248,16 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(22, 
+    addSlide(26, 
+        "Video Demonstration", 
+        "Visual example of Ransomeware attack process via Phishing",
+        `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">   
+            <video controls style="width: 50vw; height: auto;">
+                <source src="./deepfake.mp4" type="video/mp4">
+            </video>
+        </div>`
+    );
+    addSlide(27, 
         "Thank You", 
         "EAII Cyber Operation and System Security Division",
         `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
@@ -1299,4 +1326,30 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>`
     );
 
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            const video = document.getElementById('cybersecurityVideo');
+            const placeholder = document.getElementById('videoPlaceholder');
+            
+            if (video && placeholder) {
+                video.addEventListener('play', function() {
+                    placeholder.style.display = 'none';
+                });
+                
+                video.addEventListener('pause', function() {
+                    if (video.currentTime === 0) {
+                        placeholder.style.display = 'flex';
+                    }
+                });
+                
+                video.addEventListener('ended', function() {
+                    placeholder.style.display = 'flex';
+                });
+                
+                placeholder.addEventListener('click', function() {
+                    video.play();
+                });
+            }
+        }, 500);
+    });
 });
