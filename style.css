@@ -1,0 +1,21 @@
+ body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa; /* Light background */
+    min-height: 100vh;
+}
+.slide-container {
+    min-height: calc(100vh - 80px); /* Account for header/footer space */
+    animation: fadeIn 0.5s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Custom Scrollbar for better presentation look */
+.content-area::-webkit-scrollbar {
+    width: 8px;
+}
+.content-area::-webkit-scrollbar-thumb {
+    background-color: #3b82f6; /* Blue-500 */
+    border-radius: 10px;
+}

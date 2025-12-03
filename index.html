@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAII Cybersecurity Executive Brief</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body class="text-gray-800">
+
+    <!-- Header: Company Name & Logo -->
+    <header class="bg-blue-800 text-white shadow-lg fixed top-0 w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- Placeholder Image/Icon (Top Left) - Using a simple lock icon for professionalism -->
+                <svg class="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                <h1 class="text-lg font-semibold tracking-wider">EAII-Cyber security Division</h1>
+            </div>
+            <div class="text-sm font-light text-orange-400">
+                Executive Briefing
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
+        <div class="bg-white rounded-xl shadow-2xl overflow-hidden p-8 slide-container">
+            <h2 id="slide-title" class="text-3xl font-bold mb-6 text-blue-800 border-b-2 border-orange-400 pb-2"></h2>
+            
+            <div id="slide-content" class="content-area space-y-6 max-h-[70vh] overflow-y-auto pr-4">
+                <!-- Slide content will be injected here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Navigation Footer -->
+    <footer class="fixed bottom-0 w-full bg-gray-100 border-t border-gray-300 py-3 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div id="slide-counter" class="text-sm font-medium text-gray-500">
+                Slide 1 of 3
+            </div>
+            <div class="space-x-4">
+                <button id="prev-btn" onclick="changeSlide(-1)" disabled class="px-6 py-2 bg-gray-400 text-white font-medium rounded-lg transition duration-200 hover:bg-gray-500 disabled:opacity-50 shadow-md">
+                    Previous
+                </button>
+                <button id="next-btn" onclick="changeSlide(1)" class="px-6 py-2 bg-orange-500 text-white font-medium rounded-lg transition duration-200 hover:bg-orange-600 shadow-md">
+                    Next
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
