@@ -3,56 +3,636 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EAII Cybersecurity Executive Brief</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-</head>
-<body class="text-gray-800">
+    <title>EAII - Cybersecurity Division Presentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    <!-- Header: Company Name & Logo -->
-    <header class="bg-blue-800 text-white shadow-lg fixed top-0 w-full z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <!-- Placeholder Image/Icon (Top Left) - Using a simple lock icon for professionalism -->
-                <svg class="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                <h1 class="text-lg font-semibold tracking-wider">EAII-Cyber security Division</h1>
-            </div>
-            <div class="text-sm font-light text-orange-400">
-                Executive Briefing
-            </div>
-        </div>
-    </header>
+        body {
+            background-color: #0a192f;
+            color: #333;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
 
-    <!-- Main Content Area -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
-        <div class="bg-white rounded-xl shadow-2xl overflow-hidden p-8 slide-container">
-            <h2 id="slide-title" class="text-3xl font-bold mb-6 text-blue-800 border-b-2 border-orange-400 pb-2"></h2>
+        /* Slides container */
+        .slides-container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Individual slide */
+        .slide {
+            min-width: 100vw;
+            height: 100vh;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Header with logo and company name */
+        .slide-header {
+            display: flex;
+            align-items: center;
+            padding: 20px 30px;
+            border-bottom: 2px solid #e6e6e6;
+            background-color: white;
+            height: 100px;
+            flex-shrink: 0;
+        }
+
+        .company-logo {
+            height: 60px;
+            width: auto;
+            margin-right: 20px;
+        }
+
+        .company-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .company-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0056b3;
+            letter-spacing: 1px;
+        }
+
+        .division-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ff6b35;
+            margin-top: 5px;
+        }
+
+        /* Slide content area */
+        .slide-content {
+            flex: 1;
+            padding: 40px 60px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Special styling for slide 1 */
+        .slide-1-content {
+            justify-content: space-between;
+        }
+
+        .slide-title-main {
+            color: #0056b3;
+            font-size: 64px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .slide-subtitle {
+            color: #ff6b35;
+            font-size: 32px;
+            margin-bottom: 50px;
+            font-weight: 600;
+        }
+
+        .ai-battle-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .ai-side {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+        }
+
+        .ai-icon {
+            font-size: 120px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .ai-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .good-ai .ai-icon {
+            color: #0056b3;
+        }
+
+        .dark-ai .ai-icon {
+            color: #d32f2f;
+        }
+
+        .ai-label {
+            font-size: 24px;
+            font-weight: 700;
+            padding: 10px 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .good-ai .ai-label {
+            background-color: rgba(0, 86, 179, 0.1);
+            color: #0056b3;
+        }
+
+        .dark-ai .ai-label {
+            background-color: rgba(211, 47, 47, 0.1);
+            color: #d32f2f;
+        }
+
+        .ai-description {
+            font-size: 18px;
+            line-height: 1.5;
+            max-width: 300px;
+        }
+
+        .vs-container {
+            margin: 0 40px;
+            position: relative;
+        }
+
+        .vs-text {
+            font-size: 36px;
+            font-weight: 800;
+            color: #ff6b35;
+            background-color: white;
+            padding: 15px 25px;
+            border-radius: 50%;
+            border: 5px solid #ff6b35;
+            z-index: 2;
+            position: relative;
+        }
+
+        .battle-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #0056b3, #ff6b35, #d32f2f);
+            z-index: 1;
+        }
+
+        .era-description {
+            font-size: 24px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-top: 40px;
+            color: #333;
+            text-align: center;
+        }
+
+        .era-highlight {
+            color: #0056b3;
+            font-weight: 700;
+        }
+
+        /* For other slides */
+        .slide-title {
+            color: #0056b3;
+            font-size: 36px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #ff6b35;
+        }
+
+        .slide-description {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        /* Navigation buttons */
+        .nav-btn {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 84, 180, 0.8);
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: #0054b4;
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .prev-btn {
+            left: 30px;
+        }
+
+        .next-btn {
+            right: 30px;
+        }
+
+        .nav-btn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            transform: translateY(-50%);
+        }
+
+        /* Slide counter */
+        .slide-counter {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 84, 180, 0.9);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            z-index: 100;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Color coding for content */
+        .caution {
+            color: #d32f2f;
+            font-weight: 600;
+        }
+
+        .good {
+            color: #388e3c;
+            font-weight: 600;
+        }
+
+        .warning {
+            color: #f57c00;
+            font-weight: 600;
+        }
+
+        /* Content layouts */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .content-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid #0056b3;
+        }
+
+        .card-title {
+            font-size: 22px;
+            color: #0056b3;
+            margin-bottom: 15px;
+        }
+
+        .card-content {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .slide-title-main {
+                font-size: 48px;
+            }
             
-            <div id="slide-content" class="content-area space-y-6 max-h-[70vh] overflow-y-auto pr-4">
-                <!-- Slide content will be injected here -->
+            .slide-subtitle {
+                font-size: 28px;
+            }
+            
+            .ai-icon {
+                font-size: 90px;
+            }
+            
+            .vs-text {
+                font-size: 28px;
+                padding: 12px 20px;
+            }
+            
+            .era-description {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide-header {
+                padding: 15px;
+                height: 80px;
+            }
+            
+            .company-logo {
+                height: 50px;
+            }
+            
+            .company-name {
+                font-size: 20px;
+            }
+            
+            .division-name {
+                font-size: 16px;
+            }
+            
+            .slide-content {
+                padding: 25px 30px;
+            }
+            
+            .slide-title-main {
+                font-size: 36px;
+            }
+            
+            .slide-subtitle {
+                font-size: 22px;
+                margin-bottom: 30px;
+            }
+            
+            .ai-battle-container {
+                flex-direction: column;
+                margin: 30px 0;
+            }
+            
+            .ai-side {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            
+            .vs-container {
+                margin: 20px 0;
+            }
+            
+            .vs-text {
+                font-size: 24px;
+                padding: 10px 18px;
+            }
+            
+            .battle-line {
+                width: 5px;
+                height: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: linear-gradient(to bottom, #0056b3, #ff6b35, #d32f2f);
+            }
+            
+            .era-description {
+                font-size: 18px;
+                margin-top: 20px;
+            }
+            
+            .nav-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            .prev-btn {
+                left: 15px;
+            }
+            
+            .next-btn {
+                right: 15px;
+            }
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0056b3;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #004494;
+        }
+    </style>
+</head>
+<body>
+    <!-- Slides Container -->
+    <div class="slides-container" id="slidesContainer">
+        <!-- Slide 1: Cyber Security And Artificial Intelligence Era -->
+        <div class="slide" id="slide1">
+            <div class="slide-header">
+                <img src="https://cdn-icons-png.flaticon.com/512/681/681662.png" alt="EAII Logo" class="company-logo">
+                <div class="company-info">
+                    <div class="company-name">EAII</div>
+                    <div class="division-name">Cybersecurity Division</div>
+                </div>
+            </div>
+            <div class="slide-content slide-1-content">
+                <div>
+                    <h1 class="slide-title-main">Cyber Security And Artificial Intelligence Era</h1>
+                    <div class="slide-subtitle">Adaptive Security Intelligence</div>
+                    
+                    <div class="ai-battle-container">
+                        <div class="ai-side good-ai">
+                            <div class="ai-label">Defensive AI</div>
+                            <div class="ai-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <p class="ai-description">
+                                AI-powered security systems that protect, detect, and respond to threats in real-time.
+                            </p>
+                        </div>
+                        
+                        <div class="vs-container">
+                            <div class="battle-line"></div>
+                            <div class="vs-text">VS</div>
+                        </div>
+                        
+                        <div class="ai-side dark-ai">
+                            <div class="ai-label">Offensive AI</div>
+                            <div class="ai-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <p class="ai-description">
+                                AI-driven attacks that evolve, adapt, and exploit vulnerabilities autonomously.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <p class="era-description">
+                        We are entering a new era where <span class="era-highlight">Artificial Intelligence transforms both cybersecurity defenses and threats</span>. 
+                        Our adaptive security intelligence framework leverages AI to stay ahead of evolving risks.
+                    </p>
+                </div>
+                
+                <div style="margin-top: 40px; font-size: 18px; color: #666; text-align: center;">
+                    <p>Use the <i class="fas fa-arrow-right"></i> and <i class="fas fa-arrow-left"></i> arrow keys or the navigation buttons to continue.</p>
+                </div>
             </div>
         </div>
-    </main>
+        
+        <!-- Additional slides will be added here based on your input -->
+    </div>
 
-    <!-- Navigation Footer -->
-    <footer class="fixed bottom-0 w-full bg-gray-100 border-t border-gray-300 py-3 shadow-2xl">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <div id="slide-counter" class="text-sm font-medium text-gray-500">
-                Slide 1 of 3
-            </div>
-            <div class="space-x-4">
-                <button id="prev-btn" onclick="changeSlide(-1)" disabled class="px-6 py-2 bg-gray-400 text-white font-medium rounded-lg transition duration-200 hover:bg-gray-500 disabled:opacity-50 shadow-md">
-                    Previous
-                </button>
-                <button id="next-btn" onclick="changeSlide(1)" class="px-6 py-2 bg-orange-500 text-white font-medium rounded-lg transition duration-200 hover:bg-orange-600 shadow-md">
-                    Next
-                </button>
-            </div>
-        </div>
-    </footer>
+    <!-- Navigation Buttons -->
+    <button class="nav-btn prev-btn" id="prevBtn" disabled>
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="nav-btn next-btn" id="nextBtn">
+        <i class="fas fa-chevron-right"></i>
+    </button>
 
-    <script src="./script.js"></script>
+    <!-- Slide Counter -->
+    <div class="slide-counter" id="slideCounter">
+        Slide 1 of 1
+    </div>
 
+    <script>
+        // Initial setup
+        document.addEventListener('DOMContentLoaded', function() {
+            const slidesContainer = document.getElementById('slidesContainer');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slideCounter = document.getElementById('slideCounter');
+            
+            let currentSlide = 0;
+            let totalSlides = document.querySelectorAll('.slide').length;
+            
+            // Update slide counter
+            function updateCounter() {
+                slideCounter.textContent = `Slide ${currentSlide + 1} of ${totalSlides}`;
+            }
+            
+            // Update navigation buttons
+            function updateButtons() {
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === totalSlides - 1;
+                
+                // Style adjustments for disabled state
+                if (prevBtn.disabled) {
+                    prevBtn.style.opacity = "0.5";
+                } else {
+                    prevBtn.style.opacity = "1";
+                }
+                
+                if (nextBtn.disabled) {
+                    nextBtn.style.opacity = "0.5";
+                } else {
+                    nextBtn.style.opacity = "1";
+                }
+            }
+            
+            // Go to specific slide
+            function goToSlide(slideIndex) {
+                if (slideIndex < 0 || slideIndex >= totalSlides) return;
+                
+                currentSlide = slideIndex;
+                slidesContainer.style.transform = `translateX(-${currentSlide * 100}vw)`;
+                updateCounter();
+                updateButtons();
+            }
+            
+            // Next slide
+            function nextSlide() {
+                if (currentSlide < totalSlides - 1) {
+                    goToSlide(currentSlide + 1);
+                }
+            }
+            
+            // Previous slide
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    goToSlide(currentSlide - 1);
+                }
+            }
+            
+            // Event listeners for buttons
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight' || e.key === 'Right') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft' || e.key === 'Left') {
+                    prevSlide();
+                }
+            });
+            
+            // Initialize
+            updateCounter();
+            updateButtons();
+            
+            // Function to add new slide (to be called when you provide content)
+            window.addSlide = function(slideNumber, title, description, contentHTML) {
+                const newSlide = document.createElement('div');
+                newSlide.className = 'slide';
+                newSlide.id = `slide${slideNumber}`;
+                
+                // Create slide header
+                const slideHeader = document.createElement('div');
+                slideHeader.className = 'slide-header';
+                slideHeader.innerHTML = `
+                    <img src="https://cdn-icons-png.flaticon.com/512/681/681662.png" alt="EAII Logo" class="company-logo">
+                    <div class="company-info">
+                        <div class="company-name">EAII</div>
+                        <div class="division-name">Cybersecurity Division</div>
+                    </div>
+                `;
+                
+                // Create slide content
+                const slideContent = document.createElement('div');
+                slideContent.className = 'slide-content';
+                slideContent.innerHTML = `
+                    <h1 class="slide-title">${title}</h1>
+                    <p class="slide-description">${description}</p>
+                    ${contentHTML}
+                `;
+                
+                // Assemble slide
+                newSlide.appendChild(slideHeader);
+                newSlide.appendChild(slideContent);
+                
+                // Add slide to container
+                slidesContainer.appendChild(newSlide);
+                
+                // Update total slides count and navigation
+                totalSlides = document.querySelectorAll('.slide').length;
+                updateButtons();
+                
+                console.log(`Slide ${slideNumber} added successfully`);
+                return newSlide;
+            };
+        });
+    </script>
 </body>
 </html>

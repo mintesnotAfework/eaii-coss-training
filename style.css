@@ -1,21 +1,175 @@
- body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f8f9fa; /* Light background */
-    min-height: 100vh;
+/* --- Global Variables and Resets --- */
+:root {
+    --eaii-blue: #007bff;      /* Professional Blue */
+    --eaii-orange: #ff7f00;    /* Accent Orange */
+    --eaii-white: #ffffff;
+    --eaii-dark: #343a40;      /* Dark/Text color */
+    --caution-red: #dc3545;    /* Caution/Danger */
+    --good-green: #28a745;     /* Success/Good */
+    --warning-yellow: #ffc107; /* Warning */
 }
-.slide-container {
-    min-height: calc(100vh - 80px); /* Account for header/footer space */
-    animation: fadeIn 0.5s ease-out;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Professional Font */
 }
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Important for full-screen single-page control */
+    background-color: var(--eaii-dark);
 }
-/* Custom Scrollbar for better presentation look */
-.content-area::-webkit-scrollbar {
-    width: 8px;
+
+/* --- Presentation Container --- */
+#presentation-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden; /* Hide non-active slides */
 }
-.content-area::-webkit-scrollbar-thumb {
-    background-color: #3b82f6; /* Blue-500 */
-    border-radius: 10px;
+
+/* --- Slide Base Style --- */
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--eaii-white);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateX(100%); /* Initial state: off-screen right */
+}
+
+.slide.active-slide {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 10;
+}
+
+/* Slide Transition Animation */
+.slide.prev-slide {
+    transform: translateX(-100%); /* When moving back */
+}
+.slide.next-slide {
+    transform: translateX(100%); /* When moving forward */
+}
+
+
+/* --- Header Component --- */
+.slide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: var(--eaii-dark); /* Dark strip at the top */
+    color: var(--eaii-white);
+    font-size: 1.1rem;
+    font-weight: 600;
+    flex-shrink: 0; /* Prevents header from shrinking */
+    border-bottom: 3px solid var(--eaii-orange);
+}
+
+.company-logo {
+    height: 30px; /* Adjust size as needed */
+    width: auto;
+    background-color: var(--eaii-white); /* Example: make sure logo is visible */
+    padding: 2px;
+}
+
+/* --- Slide Content Layout --- */
+.slide-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 40px;
+    text-align: center;
+    overflow: hidden; /* Keep content within bounds */
+}
+
+/* --- Slide 1 Specific Styling --- */
+.slide-1-content {
+    /* No padding here, as the background needs to be full-size */
+    padding: 0;
+    justify-content: flex-start; /* Title above the background graphic */
+    background-color: var(--eaii-dark);
+}
+
+.slide-title-1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--eaii-orange);
+    margin-top: 10vh; /* Position title near the top */
+    margin-bottom: 5vh;
+    z-index: 20; /* Keep text above the background */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ai-background-split {
+    position: absolute;
+    top: 50%; /* Position the graphic below the title */
+    left: 0;
+    width: 100%;
+    height: 50%; /* Only cover the bottom half */
+    display: flex;
+    z-index: 1; /* Below the title */
+}
+
+.dark-gpt, .good-gpt {
+    width: 50%;
+    height: 100%;
+    /* In a real scenario, you'd use a background image for a GPT-like graphic */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* Subtle background */
+}
+
+.dark-gpt {
+    background-color: #000000; /* Placeholder for 'Dark GPT' background */
+    border-right: 1px solid var(--eaii-orange);
+}
+
+.good-gpt {
+    background-color: var(--eaii-blue); /* Placeholder for 'Good GPT' background */
+}
+
+
+/* --- Navigation Arrows --- */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--eaii-white);
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background 0.3s, opacity 0.3s;
+    outline: none;
+}
+
+.nav-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#nav-left {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+#nav-right {
+    right: 0;
+    border-radius: 5px 0 0 5px;
 }
