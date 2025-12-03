@@ -964,6 +964,273 @@ document.addEventListener('DOMContentLoaded', function() {
         ``
     );
     addSlide(20, 
+        "Deepfake Threat Landscape", 
+        "Understanding AI-generated impersonation risks to organizational security",
+        `<div style="display: flex; flex-direction: column;">
+            <div style="display: flex; align-items: center; margin-bottom: 40px;">
+                <div style="flex: 1; text-align: center;">
+                    <i class="fa-solid fa-user-secret" style="font-size: 100px; color: #d32f2f; margin-right: 30px;"></i>
+                </div>
+                <div style="flex: 3;">
+                    <h2 style="color: #0056b3; font-size: 28px; margin-bottom: 15px;">The Deepfake Revolution</h2>
+                    <p style="font-size: 20px; line-height: 1.6; color: #333;">
+                        AI-generated synthetic media that realistically impersonates individuals has evolved from 
+                        entertainment novelty to sophisticated cybersecurity threat targeting organizations worldwide.
+                    </p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h3 style="color: #0056b3; font-size: 24px; margin-bottom: 25px; text-align: center;">
+                    <i class="fa-solid fa-chart-line" style="margin-right: 10px;"></i>
+                    Deepfake Growth Statistics
+                </h3>
+                
+                <div class="content-grid" style="grid-template-columns: repeat(3, 1fr); gap: 25px;">
+                    <!-- Stat 1 -->
+                    <div class="content-card" style="background-color: rgba(211, 47, 47, 0.05);">
+                        <div style="text-align: center;">
+                            <div class="stat-highlight" style="color: #d32f2f; font-size:75px; font-weight: bolder;">900%</div>
+                            <div class="stat-label">Increase in deepfake incidents</div>
+                            <p class="card-content" style="margin-top: 15px;">
+                                Year-over-year growth in corporate-targeted deepfake attacks
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Stat 2 -->
+                    <div class="content-card" style="background-color: rgba(245, 124, 0, 0.05);">
+                        <div style="text-align: center;">
+                            <div class="stat-highlight" style="color: #f57c00;font-size:75px; font-weight: bolder;">$2.5M</div>
+                            <div class="stat-label">Average attack cost</div>
+                            <p class="card-content" style="margin-top: 15px;">
+                                Financial impact of successful deepfake-based fraud
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Stat 3 -->
+                    <div class="content-card" style="background-color: rgba(211, 47, 47, 0.05);">
+                        <div style="text-align: center;">
+                            <div class="stat-highlight" style="color: #d32f2f;font-size:75px; font-weight: bolder;">81%</div>
+                            <div class="stat-label">Business concern</div>
+                            <p class="card-content" style="margin-top: 15px;">
+                                of executives are concerned about deepfake threats to their organization
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    );
+    addSlide(21, 
+        "Deepfake Attack Vectors", 
+        "Specific methods and scenarios of AI-generated impersonation attacks",
+        `<div style="display: flex; flex-direction: column;"> 
+            <div style="margin-top: 20px;">
+                <h3 style="color: #0056b3; font-size: 24px; margin-bottom: 25px; text-align: center;">
+                    <i class="fa-solid fa-vector-square" style="margin-right: 10px;"></i>
+                    Primary Deepfake Attack Channels
+                </h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 30px;">
+                    <!-- Vector 1 -->
+                    <div style="display: flex; align-items: flex-start; background-color: rgba(211, 47, 47, 0.05); padding: 25px; border-radius: 10px; border-left: 5px solid #d32f2f;">
+                        <div style="width: 60px; flex-shrink: 0; text-align: center;">
+                            <i class="fa-solid fa-phone-volume" style="font-size: 36px; color: #d32f2f; margin-top: 10px;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #d32f2f; font-size: 22px; margin-bottom: 10px;">Voice Cloning (Vishing 2.0)</h4>
+                            <p style="font-size: 18px; color: #333; line-height: 1.6; margin: 0;">
+                                <strong>Real-time or recorded</strong> voice impersonation for phone fraud. 
+                                Typically targets finance teams for urgent wire transfers or credential sharing.
+                            </p>
+                            <div style="margin-top: 15px; padding: 10px; background-color: rgba(211, 47, 47, 0.1); border-radius: 6px;">
+                                <span style="font-size: 14px; color: #d32f2f;"><strong>Success Rate:</strong> 75% when combined with social engineering</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Vector 2 -->
+                    <div style="display: flex; align-items: flex-start; background-color: rgba(211, 47, 47, 0.05); padding: 25px; border-radius: 10px; border-left: 5px solid #d32f2f;">
+                        <div style="width: 60px; flex-shrink: 0; text-align: center;">
+                            <i class="fa-solid fa-video" style="font-size: 36px; color: #d32f2f; margin-top: 10px;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #d32f2f; font-size: 22px; margin-bottom: 10px;">Video Conferencing Attacks</h4>
+                            <p style="font-size: 18px; color: #333; line-height: 1.6; margin: 0;">
+                                <strong>Real-time deepfake injection</strong> into video calls. Used to authorize 
+                                transactions, share sensitive information, or instruct teams to bypass protocols.
+                            </p>
+                            <div style="margin-top: 15px; padding: 10px; background-color: rgba(211, 47, 47, 0.1); border-radius: 6px;">
+                                <span style="font-size: 14px; color: #d32f2f;"><strong>Detection Difficulty:</strong> High - real-time rendering improves</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Vector 3 -->
+                    <div style="display: flex; align-items: flex-start; background-color: rgba(245, 124, 0, 0.05); padding: 25px; border-radius: 10px; border-left: 5px solid #f57c00;">
+                        <div style="width: 60px; flex-shrink: 0; text-align: center;">
+                            <i class="fa-solid fa-file-video" style="font-size: 36px; color: #f57c00; margin-top: 10px;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #f57c00; font-size: 22px; margin-bottom: 10px;">Pre-recorded Media</h4>
+                            <p style="font-size: 18px; color: #333; line-height: 1.6; margin: 0;">
+                                <strong>Fake announcement videos</strong> for stock manipulation, crisis creation, 
+                                or instructions sent via email/internal communications.
+                            </p>
+                            <div style="margin-top: 15px; padding: 10px; background-color: rgba(245, 124, 0, 0.1); border-radius: 6px;">
+                                <span style="font-size: 14px; color: #f57c00;"><strong>Scale:</strong> Mass distribution possible</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Vector 4 -->
+                    <div style="display: flex; align-items: flex-start; background-color: rgba(245, 124, 0, 0.05); padding: 25px; border-radius: 10px; border-left: 5px solid #f57c00;">
+                        <div style="width: 60px; flex-shrink: 0; text-align: center;">
+                            <i class="fa-solid fa-comment-dollar" style="font-size: 36px; color: #f57c00; margin-top: 10px;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #f57c00; font-size: 22px; margin-bottom: 10px;">Social Media Manipulation</h4>
+                            <p style="font-size: 18px; color: #333; line-height: 1.6; margin: 0;">
+                                <strong>Fake executive posts</strong> impacting stock prices, partnerships, 
+                                or organizational reputation. Often combined with disinformation campaigns.
+                            </p>
+                            <div style="margin-top: 15px; padding: 10px; background-color: rgba(245, 124, 0, 0.1); border-radius: 6px;">
+                                <span style="font-size: 14px; color: #f57c00;"><strong>Response Time:</strong> Critical - minutes matter</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    );
+    addSlide(22, 
+        "Executive Impersonation Risks", 
+        "Specific vulnerabilities and threats targeting C-level leadership",
+        `<div style="display: flex; flex-direction: column;">
+            <div style="display: flex; align-items: center; margin-bottom: 40px;">
+                <div style="flex: 1; text-align: center;">
+                    <i class="fa-solid fa-user-tie" style="font-size: 100px; color: #0056b3; margin-right: 30px;"></i>
+                </div>
+                <div style="flex: 3;">
+                    <h2 style="color: #0056b3; font-size: 28px; margin-bottom: 15px;">C-Level Targeting Dynamics</h2>
+                    <p style="font-size: 20px; line-height: 1.6; color: #333;">
+                        Executives are disproportionately targeted due to their authority, access to sensitive 
+                        information, and ability to authorize transactions or bypass security protocols.
+                    </p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h3 style="color: #0056b3; font-size: 24px; margin-bottom: 30px; text-align: center;">
+                    <i class="fa-solid fa-bullseye" style="margin-right: 10px;"></i>
+                    Executive-Specific Impersonation Scenarios
+                </h3>
+                
+                <div class="content-grid" style="grid-template-columns: repeat(3, 1fr); gap: 25px;">
+                    <!-- Scenario 1 -->
+                    <div class="content-card" style="background-color: rgba(211, 47, 47, 0.05);">
+                        <div style="text-align: center;">
+                            <i class="fa-solid fa-money-bill-transfer" style="font-size: 48px; color: #d32f2f; margin-bottom: 20px;"></i>
+                            <h4 class="card-title" style="color: #d32f2f;">Wire Fraud Authorization</h4>
+                            <p class="card-content">
+                                Fake CEO/CFO calls or videos authorizing urgent international transfers
+                            </p>
+                            <div style="margin-top: 15px; padding: 8px; background-color: rgba(211, 47, 47, 0.1); border-radius: 6px;">
+                                <span style="font-size: 13px; color: #d32f2f;"><strong>Typical Loss:</strong> $250K-$5M</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Scenario 2 -->
+                    <div class="content-card" style="background-color: rgba(245, 124, 0, 0.05);">
+                        <div style="text-align: center;">
+                            <i class="fa-solid fa-file-contract" style="font-size: 48px; color: #f57c00; margin-bottom: 20px;"></i>
+                            <h4 class="card-title" style="color: #f57c00;">Contract/M&A Manipulation</h4>
+                            <p class="card-content">
+                                Impersonation during sensitive negotiations or due diligence processes
+                            </p>
+                            <div style="margin-top: 15px; padding: 8px; background-color: rgba(245, 124, 0, 0.1); border-radius: 6px;">
+                                <span style="font-size: 13px; color: #f57c00;"><strong>Exposure:</strong> Strategic IP leakage</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Scenario 3 -->
+                    <div class="content-card" style="background-color: rgba(211, 47, 47, 0.05);">
+                        <div style="text-align: center;">
+                            <i class="fa-solid fa-shield" style="font-size: 48px; color: #d32f2f; margin-bottom: 20px;"></i>
+                            <h4 class="card-title" style="color: #d32f2f;">Security Bypass Commands</h4>
+                            <p class="card-content">
+                                Fake orders to IT/security teams to disable controls or grant access
+                            </p>
+                            <div style="margin-top: 15px; padding: 8px; background-color: rgba(211, 47, 47, 0.1); border-radius: 6px;">
+                                <span style="font-size: 13px; color: #d32f2f;"><strong>Risk:</strong> Full system compromise</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    );
+    addSlide(16, 
+        "Deepfake Detection & Prevention", 
+        "Technical and procedural defenses against AI-generated impersonation",
+        `<div style="display: flex; flex-direction: column;">
+            
+            <div style="margin-top: 40px;">
+                <div class="content-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="content-card" style="border-top: 5px solid #0056b3;">
+                        <h4 class="card-title" style="color: #0056b3;">
+                            <i class="fa-solid fa-people-arrows" style="margin-right: 10px;"></i>
+                            Procedural Defenses
+                        </h4>
+                        <ul style="font-size: 17px; color: #333; line-height: 1.6; margin-top: 20px;">
+                            <li><strong>Multi-channel verification</strong> - Confirm requests through separate communication channels</li>
+                            <li><strong>Executive codewords/phrases</strong> - Pre-established verification for urgent requests</li>
+                            <li><strong>Transaction approval delays</strong> - Mandatory cooling-off periods for large transfers</li>
+                            <li><strong>Designated verifiers</strong> - Specific staff trained to authenticate executive communications</li>
+                            <li><strong>Incident response playbooks</strong> - Clear procedures for suspected deepfake incidents</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card" style="border-top: 5px solid #388e3c;">
+                        <h4 class="card-title" style="color: #388e3c;">
+                            <i class="fa-solid fa-graduation-cap" style="margin-right: 10px;"></i>
+                            Training & Awareness
+                        </h4>
+                        <div style="margin-top: 20px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                                <span style="font-size: 16px; color: #333;">Executive Training</span>
+                                <span style="font-size: 16px; color: #388e3c; font-weight: bold;">Quarterly</span>
+                            </div>
+                            <div style="height: 10px; background-color: #e0e0e0; border-radius: 5px; margin-bottom: 20px; overflow: hidden;">
+                                <div style="width: 25%; height: 100%; background-color: #388e3c;"></div>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                                <span style="font-size: 16px; color: #333;">Finance/Admin Staff</span>
+                                <span style="font-size: 16px; color: #388e3c; font-weight: bold;">Monthly</span>
+                            </div>
+                            <div style="height: 10px; background-color: #e0e0e0; border-radius: 5px; margin-bottom: 20px; overflow: hidden;">
+                                <div style="width: 85%; height: 100%; background-color: #388e3c;"></div>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                                <span style="font-size: 16px; color: #333;">All Employees</span>
+                                <span style="font-size: 16px; color: #388e3c; font-weight: bold;">Semi-annual</span>
+                            </div>
+                            <div style="height: 10px; background-color: #e0e0e0; border-radius: 5px; margin-bottom: 15px; overflow: hidden;">
+                                <div style="width: 50%; height: 100%; background-color: #388e3c;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    );
+    addSlide(22, 
         "Thank You", 
         "EAII Cyber Operation and System Security Division",
         `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
