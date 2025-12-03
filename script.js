@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <img src="./logo.png" alt="EAII Logo" class="company-logo">
             <div class="company-info">
                 <div class="company-name">Ethiopain Artifical Inteligence Institute</div>
-                <div class="division-name">Cyber Operation and System Security Division</div>
+                <div class="division-name">Cybersecurity Division</div>
             </div>
         `;
         
@@ -377,6 +377,15 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>`
     );
     addSlide(7, 
+        "Phishing Practice", 
+        "Phishing Practice using Google",
+        `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">            
+            <a class="slide-description" href="https://phishingquiz.withgoogle.com/" target="_blank" style="text-decoration: none; font-size: 50px; display: block; "> 
+                <img src="./phishing.png" alt="Phishing Example" style="width: 25vw; height: auto;"/>
+           </a>
+        </div>`
+    );
+    addSlide(8, 
         "USB Baiting", 
         "Physical social engineering attack exploiting human curiosity with infected storage devices",
         `<div style="display: flex; flex-direction: column;">            
@@ -435,7 +444,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(8, 
+    addSlide(9, 
         "Tailgating", 
         "Physical security breach where unauthorized persons follow authorized individuals into restricted areas",
         `<div style="display: flex; flex-direction: column;">
@@ -504,7 +513,267 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(9, 
+    addSlide(10, 
+        "Password Security Fundamentals", 
+        "The critical importance of strong password policies in organizational security",
+        `<div style="display: flex; flex-direction: column;">
+            <div style="margin-top: 20px;">
+                <h3 style="color: #0056b3; font-size: 24px; margin-bottom: 25px; text-align: center;">
+                    <i class="fa-solid fa-lock" style="margin-right: 10px;"></i>
+                    Password Strength Essentials
+                </h3>
+                
+                <div class="content-grid" style="grid-template-columns: repeat(3, 1fr); gap: 25px;">
+                    <!-- Strength 1 -->
+                    <div class="content-card" style="background-color: rgba(56, 142, 60, 0.05);">
+                        <div style="text-align: center;">
+                            <i class="fa-solid fa-ruler-combined" style="font-size: 48px; color: #388e3c; margin-bottom: 20px;"></i>
+                            <h4 class="card-title" style="color: #388e3c;">Length Matters</h4>
+                            <div class="stat-highlight" style="color: #388e3c;">12+ Characters</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Strength 2 -->
+                    <div class="content-card" style="background-color: rgba(0, 86, 179, 0.05);">
+                        <div style="text-align: center;">
+                            <i class="fa-solid fa-shuffle" style="font-size: 48px; color: #0056b3; margin-bottom: 20px;"></i>
+                            <h4 class="card-title" style="color: #0056b3;">Complexity Required</h4>
+                            <div class="stat-highlight" style="color: #0056b3;">4 Character Types</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Strength 3 -->
+                    <div class="content-card" style="background-color: rgba(255, 107, 53, 0.05);">
+                        <div style="text-align: center;">
+                            <i class="fa-solid fa-repeat" style="font-size: 48px; color: #ff6b35; margin-bottom: 20px;"></i>
+                            <h4 class="card-title" style="color: #ff6b35;">Uniqueness Critical</h4>
+                            <div class="stat-highlight" style="color: #ff6b35;">0 Reuse</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px;">
+                <div class="content-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="content-card" style="border-top: 5px solid #d32f2f;">
+                        <h4 class="card-title" style="color: #d32f2f;">
+                            <i class="fa-solid fa-stopwatch" style="margin-right: 10px;"></i>
+                            Cracking Time Comparison
+                        </h4>
+                        <div style="margin-top: 20px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                <span style="font-size: 16px; color: #333;">8 chars (basic)</span>
+                                <span style="font-size: 16px; color: #d32f2f; font-weight: bold;">2 hours</span>
+                            </div>
+                            <div style="height: 10px; background-color: #e0e0e0; border-radius: 5px; margin-bottom: 15px; overflow: hidden;">
+                                <div style="width: 15%; height: 100%; background-color: #d32f2f;"></div>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                <span style="font-size: 16px; color: #333;">12 chars (complex)</span>
+                                <span style="font-size: 16px; color: #388e3c; font-weight: bold;">200+ years</span>
+                            </div>
+                            <div style="height: 10px; background-color: #e0e0e0; border-radius: 5px; margin-bottom: 15px; overflow: hidden;">
+                                <div style="width: 95%; height: 100%; background-color: #388e3c;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card" style="border-top: 5px solid #0056b3;">
+                        <h4 class="card-title" style="color: #0056b3;">
+                            <i class="fa-solid fa-percentage" style="margin-right: 10px;"></i>
+                            Password-Related Breaches
+                        </h4>
+                        <div class="stat-highlight" style="color: #0056b3; font-size: 75px; font-weight:bolder;">81%</div>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    );
+    addSlide(11, 
+        "Common Password Security Issues", 
+        "Identifying and addressing prevalent password vulnerabilities in organizations",
+        `<div style="display: flex; flex-direction: column;"> 
+            <div style="margin-top: 20px;">
+                <h3 style="color: #0056b3; font-size: 24px; margin-bottom: 25px; text-align: center;">
+                    <i class="fa-solid fa-bug" style="margin-right: 10px;"></i>
+                    Top Password Security Failures
+                </h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 30px;">
+                    <!-- Issue 1 -->
+                    <div style="display: flex; align-items: flex-start; background-color: rgba(211, 47, 47, 0.05); padding: 25px; border-radius: 10px; border-left: 5px solid #d32f2f;">
+                        <div style="width: 60px; flex-shrink: 0; text-align: center;">
+                            <div style="width: 50px; height: 50px; background-color: #d32f2f; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                <span style="font-weight: bold; color: white; font-size: 24px;">1</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="color: #d32f2f; font-size: 22px; margin-bottom: 10px;">Password Reuse</h4>
+                            <p style="font-size: 18px; color: #333; line-height: 1.6; margin: 0;">
+                                <strong>65% of users</strong> reuse passwords across multiple accounts. 
+                                One compromised password gives access to multiple systems.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Issue 2 -->
+                    <div style="display: flex; align-items: flex-start; background-color: rgba(211, 47, 47, 0.05); padding: 25px; border-radius: 10px; border-left: 5px solid #d32f2f;">
+                        <div style="width: 60px; flex-shrink: 0; text-align: center;">
+                            <div style="width: 50px; height: 50px; background-color: #d32f2f; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                <span style="font-weight: bold; color: white; font-size: 24px;">2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="color: #d32f2f; font-size: 22px; margin-bottom: 10px;">Weak Password Patterns</h4>
+                            <p style="font-size: 18px; color: #333; line-height: 1.6; margin: 0;">
+                                Common patterns like "Password123", seasons + years, or simple keyboard walks 
+                                are easily guessed by attackers.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Issue 3 -->
+                    <div style="display: flex; align-items: flex-start; background-color: rgba(245, 124, 0, 0.05); padding: 25px; border-radius: 10px; border-left: 5px solid #f57c00;">
+                        <div style="width: 60px; flex-shrink: 0; text-align: center;">
+                            <div style="width: 50px; height: 50px; background-color: #f57c00; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                <span style="font-weight: bold; color: white; font-size: 24px;">3</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="color: #f57c00; font-size: 22px; margin-bottom: 10px;">Written Down Passwords</h4>
+                            <p style="font-size: 18px; color: #333; line-height: 1.6; margin: 0;">
+                                <strong>30% of employees</strong> write passwords on sticky notes or documents, 
+                                creating physical security vulnerabilities.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Issue 4 -->
+                    <div style="display: flex; align-items: flex-start; background-color: rgba(245, 124, 0, 0.05); padding: 25px; border-radius: 10px; border-left: 5px solid #f57c00;">
+                        <div style="width: 60px; flex-shrink: 0; text-align: center;">
+                            <div style="width: 50px; height: 50px; background-color: #f57c00; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                <span style="font-weight: bold; color: white; font-size: 24px;">4</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="color: #f57c00; font-size: 22px; margin-bottom: 10px;">Sharing Credentials</h4>
+                            <p style="font-size: 18px; color: #333; line-height: 1.6; margin: 0;">
+                                Team password sharing eliminates accountability and creates audit trail gaps, 
+                                violating compliance requirements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    );
+    addSlide(12, 
+        "Common Password Security Issues", 
+        "Identifying and addressing prevalent password vulnerabilities in organizations",
+        `<div style="display: flex; flex-direction: column;">  
+            <div style="margin-top: 20px;">
+                <div class="content-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="content-card" style="background-color: rgba(211, 47, 47, 0.05); border-top: 5px solid #d32f2f;">
+                        <h4 class="card-title" style="color: #d32f2f;">
+                            <i class="fa-solid fa-chart-pie" style="margin-right: 10px;"></i>
+                            Most Common Weak Passwords
+                        </h4>
+                        <ul style="font-size: 17px; color: #333; line-height: 1.6; margin-top: 15px;">
+                            <li><strong>1. 123456</strong> (Used 23 million times)</li>
+                            <li><strong>2. password</strong> (4.9 million uses)</li>
+                            <li><strong>3. 12345678</strong> (3.8 million uses)</li>
+                            <li><strong>4. qwerty</strong> (3.5 million uses)</li>
+                            <li><strong>5. 123456789</strong> (3.1 million uses)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card" style="background-color: rgba(0, 86, 179, 0.05); border-top: 5px solid #0056b3;">
+                        <h4 class="card-title" style="color: #0056b3;">
+                            <i class="fa-solid fa-business-time" style="margin-right: 10px;"></i>
+                            Business Impact Statistics
+                        </h4>
+                        <div class="stat-highlight" style="color: #0056b3; font-size: 50px; font-weight: bolder;">70%</div>
+                        <p class="card-content">
+                            of employees reuse passwords between work and personal accounts
+                        </p>
+                        <div class="stat-highlight" style="color: #0056b3; font-size: 72px; margin-top: 15px; font-weight: bolder;">$180</div>
+                        <p class="card-content">
+                            cost per employee for password resets annually
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    );
+    addSlide(13, 
+        "Password Managers & Generators", 
+        "Enterprise solutions for secure password management and generation",
+        `<div style="display: flex; flex-direction: column;">
+            <div style="display: flex; align-items: center; margin-bottom: 40px;">
+                <div style="flex: 1; text-align: center;">
+                    <i class="fa-solid fa-vault" style="font-size: 100px; color: #0056b3; margin-right: 30px;"></i>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h3 style="color: #0056b3; font-size: 24px; margin-bottom: 30px; text-align: center;">
+                    <i class="fa-solid fa-puzzle-piece" style="margin-right: 10px;"></i>
+                    Password Management Ecosystem
+                </h3>
+                
+                <div class="content-grid" style="grid-template-columns: repeat(3, 1fr); gap: 25px;">
+                    <!-- Solution 1 -->
+                    <div class="content-card" style="background-color: rgba(0, 86, 179, 0.05);">
+                        <div style="text-align: center;">
+                            <i class="fa-solid fa-database" style="font-size: 48px; color: #0056b3; margin-bottom: 20px;"></i>
+                            <h4 class="card-title" style="color: #0056b3;">Password Managers</h4>
+                            <p class="card-content">
+                                Encrypted vaults that store and auto-fill unique, complex passwords
+                            </p>
+                            <div style="margin-top: 15px; padding: 10px; background-color: rgba(0, 86, 179, 0.1); border-radius: 8px;">
+                                <span style="font-size: 14px; color: #0056b3;"><strong>Benefits:</strong> Single master password, Auto-fill, Cross-device sync</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Solution 2 -->
+                    <div class="content-card" style="background-color: rgba(56, 142, 60, 0.05);">
+                        <div style="text-align: center;">
+                            <i class="fa-solid fa-gears" style="font-size: 48px; color: #388e3c; margin-bottom: 20px;"></i>
+                            <h4 class="card-title" style="color: #388e3c;">Password Generators</h4>
+                            <p class="card-content">
+                                Tools that create random, high-entropy passwords meeting security policies
+                            </p>
+                            <div style="margin-top: 15px; padding: 10px; background-color: rgba(56, 142, 60, 0.1); border-radius: 8px;">
+                                <span style="font-size: 14px; color: #388e3c;"><strong>Benefits:</strong> Policy compliance, True randomness, No human bias</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Solution 3 -->
+                    <div class="content-card" style="background-color: rgba(255, 107, 53, 0.05);">
+                        <div style="text-align: center;">
+                            <i class="fa-solid fa-users-gear" style="font-size: 48px; color: #ff6b35; margin-bottom: 20px;"></i>
+                            <h4 class="card-title" style="color: #ff6b35;">Enterprise Features</h4>
+                            <p class="card-content">
+                                Centralized administration, team sharing, and security auditing
+                            </p>
+                            <div style="margin-top: 15px; padding: 10px; background-color: rgba(255, 107, 53, 0.1); border-radius: 8px;">
+                                <span style="font-size: 14px; color: #ff6b35;"><strong>Benefits:</strong> Admin controls, Usage reports, Emergency access</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    );
+    addSlide(14, 
+        "Artificial Intelligence Security", 
+        "Best practices for while using Artificial Intelligence tools",
+        ``
+    );
+    addSlide(15, 
         "Executive LLM Security", 
         "Best practices for C-level leaders when using Large Language Models",
         `<div style="display: flex; flex-direction: column;">          
@@ -551,7 +820,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(10, 
+    addSlide(16, 
         "Executive LLM Security", 
         "Best practices for C-level leaders when using Large Language Models",
         `<div style="display: flex; flex-direction: column;">                      
@@ -590,7 +859,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(11, 
+    addSlide(17, 
         "Executive LLM Security Guidelines", 
         "Practical security protocols for C-level leaders using AI tools",
         `<div style="display: flex; flex-direction: column;">        
@@ -652,7 +921,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(12, 
+    addSlide(18, 
         "Executive LLM Security Guidelines", 
         "Practical security protocols for C-level leaders using AI tools",
         `<div style="display: flex; flex-direction: column;">                    
@@ -689,10 +958,15 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>`
     );
-    addSlide(13, 
+    addSlide(19, 
+        "Deepfake & Impersonation Risks", 
+        "Deepfake technology threats targeting executives and mitigation strategies",
+        ``
+    );
+    addSlide(20, 
         "Thank You", 
         "EAII Cyber Operation and System Security Division",
-        `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">            
+        `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
             <div style="max-width: 800px; margin: 0 auto;">
                 <div style="background-color: #f0f7ff; padding: 40px; border-radius: 15px; margin-bottom: 40px;">
                     <h3 style="color: #0056b3; font-size: 32px; margin-bottom: 25px;">Key Takeaways</h3>
@@ -706,7 +980,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div style="display: flex; align-items: flex-start;">
                             <i class="fa-solid fa-check" style="color: #388e3c; font-size: 24px; margin-right: 15px; margin-top: 5px;"></i>
                             <p style="font-size: 18px; color: #333; line-height: 1.6; margin: 0;">
-                                <strong>AI for Leadership:</strong> LLMs can enhance executive productivity if used securely
+                                <strong>Password Security:</strong> Strong, unique passwords are critical
                             </p>
                         </div>
                         <div style="display: flex; align-items: flex-start;">
@@ -718,11 +992,43 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div style="display: flex; align-items: flex-start;">
                             <i class="fa-solid fa-check" style="color: #388e3c; font-size: 24px; margin-right: 15px; margin-top: 5px;"></i>
                             <p style="font-size: 18px; color: #333; line-height: 1.6; margin: 0;">
-                                <strong>Continuous Adaptation:</strong> Cybersecurity requires ongoing evolution
+                                <strong>Deepfake and Impersonation Risks:</strong> Heightened vigilance against AI-driven fraud
                             </p>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h4 style="color: #0056b3; font-size: 24px; margin-bottom: 15px;">Connect With Us</h4>
+                <ul style="list-style-type: none; padding: 0; margin: 0; display: flex; gap: 20px;">
+                    <li style="display: inline-block;">
+                        <a href="#" style="text-decoration: none; color: #0056b3; font-size: 18px;">
+                            <i class="fa-brands fa-twitter" style="margin-right: 5px;"></i> Twitter
+                        </a>
+                    </li>
+                    <li style="display: inline-block;">
+                        <a href="#" style="text-decoration: none; color: #0056b3; font-size: 18px;">
+                            <i class="fa-brands fa-tiktok" style="margin-right: 5px;"></i> TikTok
+                        </a>
+                    </li>
+                    <li style="display: inline-block;">
+                        <a href="#" style="text-decoration: none; color: #0056b3; font-size: 18px;">
+                            <i class="fa-brands fa-facebook" style="margin-right: 5px;"></i> Facebook
+                        </a>
+                    </li>
+                    <li style="display: inline-block;">
+                        <a href="#" style="text-decoration: none; color: #0056b3; font-size: 18px;">
+                            <i class="fa-brands fa-youtube" style="margin-right: 5px;"></i> YouTube
+                        </a>
+                    </li>
+                    <li style="display: inline-block;">
+                        <a href="#" style="text-decoration: none; color: #0056b3; font-size: 18px;">
+                            <i class="fa-brands fa-telegram" style="margin-right: 5px;"></i> Telegram
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>`
     );
 
